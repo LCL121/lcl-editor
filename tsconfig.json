@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "lib": ["es5", "ES6", "dom"],
+    "module": "ESNext",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "exclude": [
+    "node_modules/**"
+  ],
+  "include": [
+    "src/**/*.ts"
+  ]
+}

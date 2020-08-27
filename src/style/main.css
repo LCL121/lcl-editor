@@ -1,0 +1,87 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  max-width: 400px;
+}
+
+.main .nav {
+  display: flex;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main .nav button {
+  height: 2rem;
+  line-height: 2rem;
+  width: 2rem;
+  text-align: center;
+  margin: .2rem .2rem;
+  cursor: pointer;
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: 0px solid transparent;
+  outline: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .nav button:hover {
+  background: #dee0e2;
+  border-radius: 3px;
+}
+
+.main .nav button:focus {
+  background: #dee0e2;
+  border-radius: 3px;
+}
+
+.main .nav button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.main .editor {
+  border: 1px solid #000;
+  border-top: none;
+  overflow: auto;
+  height: 260px;
+  padding: 1rem;
+  box-sizing: border-box;
+  /* user-select: none; */
+}
+
+.main .editor:focus {
+  outline: none;
+}
+
+/* show part */
+button#show {
+  margin: 2rem;
+}
+
+div.showDiv {
+  padding: 1rem;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
