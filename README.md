@@ -7,3 +7,4 @@
 1. 自定义redo 和 undo 两个堆
 2. execCommand 已经废弃（通过支持判断），将尽量不再使用
 3. 创建方式（参考tinymce），只需要传入一个节点就可以实现
+4. 在最顶部添加一个触发器，如果editor 的oninput 事件触发，外部就可以监听到，然后getContent

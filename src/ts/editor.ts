@@ -1,7 +1,7 @@
 import * as style from '../styleJson/main.json'
 
 class Editor {
-  private div: HTMLDivElement;
+  div: HTMLDivElement;
 
   constructor() {
     this.div = document.createElement('div')
@@ -29,6 +29,13 @@ class Editor {
         }
       })
     }
+
+    // 内容为空时，加p标签
+    this.div.addEventListener('keydown', () => {
+      if (this.div.innerHTML === '') {
+        this.div.innerHTML = '<p><br></p>'
+      }
+    })
   }
 
   getEditor(): HTMLDivElement {
@@ -51,6 +58,13 @@ class Editor {
       .replace(/<(\/?)b>/g, '<$1strong>')
       .replace(/<li><br><\/li>/g, '')
       .replace(/(<p><br><\/p>)*$/g, '')
+  }
+
+  onGetContent() {
+    window.LCLContent = ''
+    this.div.oninput = () => {
+      window.LCLContent = this.getContent()
+    }
   }
 }
 

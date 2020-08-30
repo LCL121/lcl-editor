@@ -54,5 +54,9 @@ export default {
   },
   getContent: () => {
     return editor.getContent()
-  }
+  },
+  onGetContent: () => {
+    editor.onGetContent()
+  },
+  editor: editor.div
 }
